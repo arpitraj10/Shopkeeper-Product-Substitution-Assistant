@@ -6,7 +6,7 @@ from reasoning import find_substitutes
 kg = KnowledgeGraph("data/products.json")
 
 
-st.title("🛒 Product Substitution Assistant")
+st.title("Product Substitution Assistant")
 
 
 product = st.text_input("Requested Product ID")
@@ -38,3 +38,4 @@ if st.button("Find Alternative"):
                     st.write(f"- {r}")
 
                             
+
