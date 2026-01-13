@@ -1,0 +1,46 @@
+{
+    "products": [
+      {
+        "id": "milk_amul",
+        "name": "Amul Milk",
+        "category": "milk",
+        "brand": "Amul",
+        "price": 28,
+        "stock": 0,
+        "attributes": ["veg"]
+      },
+      {
+        "id": "milk_nandini",
+        "name": "Nandini Milk",
+        "category": "milk",
+        "brand": "Nandini",
+        "price": 26,
+        "stock": 10,
+        "attributes": ["veg"]
+      },
+      {
+        "id": "milk_soy",
+        "name": "Soy Milk",
+        "category": "plant_milk",
+        "brand": "Sofit",
+        "price": 40,
+        "stock": 15,
+        "attributes": ["veg", "lactose_free"]
+      },
+      {
+        "id": "curd_amul",
+        "name": "Amul Curd",
+        "category": "curd",
+        "brand": "Amul",
+        "price": 30,
+        "stock": 12,
+        "attributes": ["veg"]
+      }
+    ],
+
+    "category_similarity": {
+    "milk": ["plant_milk"],
+    "plant_milk": ["milk"],
+    "curd": []
+    }
+}
