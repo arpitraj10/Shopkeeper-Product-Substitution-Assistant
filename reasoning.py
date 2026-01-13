@@ -1,4 +1,4 @@
-for collections import deque
+from collections import deque
     
 def find_substitutes(kg, query_product, max_price, req_attrs, req_brand):
     G = kg.graph
@@ -43,7 +43,7 @@ def find_substitutes(kg, query_product, max_price, req_attrs, req_brand):
 
         if req_brand and prod["brand"] == req_brand:
             score += 1
-            explanation.append("same brand")
+            explanation.append("same_brand")
 
         if prod["price"] < G.nodes[query_product]["price"]:
             explanation.append("cheaper_option")
@@ -54,6 +54,7 @@ def find_substitutes(kg, query_product, max_price, req_attrs, req_brand):
 
     results.sort(key=lambda x: -x[0])
     return results[:3], None        
+
 
 
     
