@@ -1,12 +1,15 @@
 import streamlit as st
 from kg import KnowledgeGraph
 from reasoning import find_substitutes
+import os
 
+BASE_DIR = os.path.dirname(__file__)
+DATA_PATH = os.path.join(BASE_DIR, "data", "products.json")
 
-kg = KnowledgeGraph("data/products.json")
+kg = KnowledgeGraph(DATA_PATH)
 
+st.title("Shopkeeper Product Substitution Assistant")
 
-st.title("Product Substitution Assistant")
 
 
 product = st.text_input("Requested Product ID")
@@ -38,3 +41,4 @@ if st.button("Find Alternative"):
                     st.write(f"- {r}")
 
                             
+
