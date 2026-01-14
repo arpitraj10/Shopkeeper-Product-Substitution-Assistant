@@ -35,3 +35,4 @@ class KnowledgeGraph:
                 self.graph.add_edge(cat, s, relation="SIMILAR_TO")
                         
 
+
