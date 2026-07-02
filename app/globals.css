@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: #faf6ec;
+  color: #20301f;
+}
+
+body {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(32, 48, 31, 0.07) 1px,
+    transparent 0
+  );
+  background-size: 20px 20px;
+}
+
+/* Price-tag / stamp signature element */
+.price-tag {
+  position: relative;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% calc(100% - 6px),
+    calc(100% - 6px) 100%,
+    6px 100%,
+    0% calc(100% - 6px)
+  );
+}
+
+.price-tag::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -7px;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: #faf6ec;
+  border: 2px solid #20301f;
+}
+
+.stamp {
+  transform: rotate(-6deg);
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  letter-spacing: 0.08em;
+}
+
+.perforated {
+  background-image: radial-gradient(
+    circle,
+    #faf6ec 2px,
+    transparent 2.2px
+  );
+  background-size: 10px 10px;
+  background-position: -4px center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    animation: fadeIn 0.35s ease-out both;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
